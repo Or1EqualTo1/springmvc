@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery_2.1.4_baidu_min.js"></script>
+
+    <textarea id="tt">varchar</textarea>
+    <textarea id="dk">8089</textarea>
+    <button onclick="use()">接收</button>
+</head>
+<body>
+
+</body>
+<script>
+    function use() {
+
+        $.ajax({
+            url: "/ys.do",
+            type: "post",
+            dataType: "json",
+            data: {
+                dd: $("#tt").val(),
+                dk: $("#dk").val()
+            },
+            success: function (result) {
+               /*  alert(result.aaaaa.j_img);*/
+
+            },
+        })
+
+
+    };
+    function use2() {
+        /*alert($("#tt").val());*/
+
+        $.ajax({
+            url: "/ys2.do",
+            type: "post",
+            dataType: "json",
+            data: {
+                dd: $("#tt").val(),
+                dk: $("#dk").val()
+            },
+            success: function (result) {
+                /!* alert(result.aaaaa.j_img);*!/
+
+            },
+        })
+
+
+    };
+
+</script>
+</html>
